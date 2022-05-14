@@ -3,6 +3,7 @@
         display: none;
     }
     .menu{
+        scroll-behavior: smooth;
         align-items: center;
         font-size: 15px;
     }
