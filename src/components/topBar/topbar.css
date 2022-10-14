@@ -9,6 +9,15 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .logo{
+        display: none;
+    }
+    .right a:last-child{
+        display: none;
+    }
+  }
+
 .topBar{
     background-color: #282828;
     width: 100%;

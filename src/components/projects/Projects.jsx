@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
 import ProjectsList from "../projectsList/ProjectsList";
 import "./projects.css"
-import {first,second,third,fourth,fifth} from "../../ProjectData";
+import {first, second,third,fourth,fifth} from "../../App";
+
 
 export default function Projects() {
   const [selected,setSelected] = useState("first");
@@ -62,18 +63,15 @@ export default function Projects() {
       <div className="conatainer">
         {data.map((d) => (
           <div className="item">
-            <a href={d.link} target="_blank">
-            <img 
-            src={d.img}
-            alt="">
-            </img>
+            <a href={d.sub} target="_blank">
+            <img src={d.title}alt=""></img>
             </a>
             <ul>
               <li>{d.date}</li>
               <li>{d.one}</li>
               <li>{d.two}</li>
               <li>{d.three}</li>
-              <li><a href={d.git} target="_blank">GitHub Link</a></li>
+              <li><a href={d.location} target="_blank">GitHub Link</a></li>
             </ul>
           </div>
         ))}

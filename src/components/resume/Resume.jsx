@@ -1,6 +1,5 @@
 import "./resume.css"
-import {school, RBI, skills, Mitsubishi}from "../../ResumeData";
-
+import {school, RBI, skills, Mitsubishi}from "../../App";
 
 export default function Resume() {
   return (
