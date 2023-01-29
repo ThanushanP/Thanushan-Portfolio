@@ -98,7 +98,7 @@ function App() {
     }
   ])
   useEffect(()=>{
-    fetch("https://thanushanportfolio.herokuapp.com")
+    fetch("http://ec2-44-208-30-121.compute-1.amazonaws.com:8080")
       .then((res) => res.json())
       .then((jsonRes) => setRes(jsonRes));
   }, []);
