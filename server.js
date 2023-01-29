@@ -7,7 +7,7 @@ const app = express();
 const cors = require("cors");
 const mongoose = require('mongoose');
 
-let PORT = process.env.PORT || 3001;
+let PORT = process.env.PORT || 443;
 
 app.use (cors());
 app.use(express.json());
