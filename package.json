@@ -1,8 +1,10 @@
 {
-  "homepage": "https://thanushanp.github.io/Thanushan-Pirapakaran",
   "name": "web",
   "version": "0.1.0",
   "private": true,
+
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -44,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "mongoose": "^6.2.8"
   }
 }

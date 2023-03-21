@@ -98,7 +98,7 @@ function App() {
     }
   ])
   useEffect(()=>{
-    fetch("http://ec2-44-208-30-121.compute-1.amazonaws.com:8080")
+    fetch("http://portbackend-env.eba-jjb5xxgz.us-east-1.elasticbeanstalk.com/")
       .then((res) => res.json())
       .then((jsonRes) => setRes(jsonRes));
   }, []);
