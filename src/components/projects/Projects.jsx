@@ -10,7 +10,7 @@ export default function Projects() {
   const list =[
     {
       id: "first",
-      title: "WhiteBoard.IO",
+      title: "AI Chess Game",
     },
     {
       id: "second",

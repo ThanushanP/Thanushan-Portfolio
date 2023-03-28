@@ -1,3 +1,7 @@
+/*npm start
+git add .
+git commit -m "update
+git push -u origin main" */
 import "./app.css";
 import { useEffect, useState } from "react";
 import TopBar from "./components/topBar/TopBar";
