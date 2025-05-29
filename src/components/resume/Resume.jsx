@@ -125,14 +125,14 @@ export default function Resume() {
   return (
     <div className="resume" id="resume">
       <div className="resume_buttons">
-        <a
+        <button
           className={`res_but ${activeSection === "education" ? "active" : ""}`}
           onClick={() => setActiveSection("education")}
         >
           <i className="fas fa-graduation-cap"></i>
           <span>Education</span>
-        </a>
-        <a
+        </button>
+        <button
           className={`res_but ${
             activeSection === "experience" ? "active" : ""
           }`}
@@ -140,14 +140,14 @@ export default function Resume() {
         >
           <i className="fas fa-briefcase"></i>
           <span>Experience</span>
-        </a>
-        <a
+        </button>
+        <button
           className={`res_but ${activeSection === "skills" ? "active" : ""}`}
           onClick={() => setActiveSection("skills")}
         >
           <i className="fas fa-pencil-alt"></i>
           <span>Skills</span>
-        </a>
+        </button>
       </div>
       <div
         className={`resume_info ${

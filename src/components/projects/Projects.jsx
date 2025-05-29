@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./projects.css";
 import { first, second, third, fourth, fifth } from "../../App";
 
@@ -56,7 +56,11 @@ export default function Projects() {
                     <li>{d.two}</li>
                     <li>{d.three}</li>
                     <li>
-                      <a href={d.location} target="_blank">
+                      <a
+                        href={d.location}
+                        target="_blank"
+                        el="noopener noreferrer"
+                      >
                         GitHub Link
                       </a>
                     </li>
