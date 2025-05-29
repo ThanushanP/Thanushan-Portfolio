@@ -43,10 +43,6 @@ function App() {
       });
   }, []);
 
-  useEffect(() => {
-    console.log(resume);
-  }, [resume]);
-
   school = [
     {
       title: resume[0].title,

@@ -1,5 +1,3 @@
-@media screen and (max-width: 768px) {
-}
 .projects {
   background-color: #c0bbbb;
   width: 100vw;
@@ -92,4 +90,12 @@
 
 .arrow.right {
   right: 45px; /* Position the right arrow */
+}
+@media screen and (max-width: 768px) {
+  .projects {
+    padding: 20px;
+  }
+  .arrow {
+    top: 90%;
+  }
 }

@@ -37,7 +37,7 @@ export default function Projects() {
         <>
           {/* Left Arrow */}
           <div className="arrow left" onClick={handlePrev}>
-            &#9664; {/* Left arrow symbol */}
+            <i className="fas fa-chevron-left"></i>
           </div>
 
           {/* Image Container */}
@@ -72,7 +72,7 @@ export default function Projects() {
 
           {/* Right Arrow */}
           <div className="arrow right" onClick={handleNext}>
-            &#9654; {/* Right arrow symbol */}
+            <i className="fas fa-chevron-right"></i>
           </div>
         </>
       )}

@@ -8,7 +8,11 @@ export default function Resume() {
   const renderContent = () => {
     switch (activeSection) {
       case "education":
-        if (school.length === 0) {
+        if (
+          Freelance.length === 0 &&
+          RBI.length === 0 &&
+          Mitsubishi.length === 0
+        ) {
           return <div className="loading">Loading...</div>; // Show loading animation
         }
         return (
