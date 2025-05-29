@@ -59,7 +59,7 @@ export default function Projects() {
                       <a
                         href={d.location}
                         target="_blank"
-                        el="noopener noreferrer"
+                        rel="noopener noreferrer"
                       >
                         GitHub Link
                       </a>
