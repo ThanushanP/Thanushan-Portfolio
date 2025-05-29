@@ -1,56 +1,86 @@
-@media screen and (max-width: 850px){
-    .logo{
-        display: none;
-    }
-    .menu{
-        scroll-behavior: smooth;
-        align-items: center;
-        font-size: 15px;
-    }
+/* General Styles */
+.topBar {
+  background: linear-gradient(90deg, #c0bbbb, #21213d, #21213d);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100%;
+  height: 10dvh;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  overflow: visible; /* Ensure the dropdown menu is not clipped */
 }
 
-@media screen and (max-width: 600px) {
-    .logo{
-        display: none;
-    }
-    .right a:last-child{
-        display: none;
-    }
+.logo {
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.wrapper {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: black;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 850px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10dvh;
+    right: 0;
+    background-color: #21213d;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 
-.topBar{
-    background-color: #282828;
-    width: 100%;
-    height: 70px;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-}
+  .menu.active {
+    display: flex;
+    background: linear-gradient(90deg, #c0bbbb, #21213d, #21213d);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 
-.logo{
-    color: white;
-    font-size: 40px;
-    text-decoration: none;
-    
-}
+  .hamburger {
+    display: flex;
+  }
 
-.logo:hover{
-    color:black;
-}
-
-.wrapper{
-    padding: 5px 20px;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu{
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    padding-right: 20px;
-}
-.menu:hover{
-    color:black;
+  .logo {
+    font-size: 30px; /* Adjust logo size for mobile */
+  }
 }

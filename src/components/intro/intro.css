@@ -1,22 +1,137 @@
-@media screen and (max-width: 768px){
-    .intro{
-        background-color: #21213d;
-        width: 100vw;
-        height: calc(100vh - 70px);
-        scroll-snap-align: start;
-        font-size: 65px;
-        text-align: center;
-        padding-top: 100px;
-    }
+@import "~@fortawesome/fontawesome-free/css/all.css";
+.intro {
+  width: 100vw;
+  height: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row;
 }
-@media screen and (min-width: 768px){
-    .intro{
-        background-color: #21213d;
-        width: 100vw;
-        height: calc(100vh - 70px);
-        scroll-snap-align: start;
-        font-size: 120px;
-        text-align: center;
-        padding-top: 100px;
-    }
+
+.intro-image {
+  width: 20dvw;
+  height: 20dvw;
+  border-radius: 50%;
+}
+
+.intro-right {
+  height: 100%;
+  width: 60dvw;
+  padding: 5dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  background-color: #21213d;
+  gap: 20px;
+}
+.intro-left {
+  height: 100%;
+  width: 40dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.intro-title {
+  font-size: 25px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.menu a {
+  color: white;
+  font-size: 20px;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #0077b5;
+}
+
+.menu span {
+  color: white;
+  font-size: 18px;
+}
+
+.socials-menu span i,
+.socials-menu a i {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    overflow: visible;
+  }
+
+  .intro-left,
+  .intro-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .intro-image {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+.socials-menu {
+  font-size: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.socials-menu span {
+  color: white;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials-menu span span {
+  font-size: 20px;
+}
+
+.social-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover {
+  color: #0077b5;
+}
+
+.social-link:hover i,
+.social-link:hover span {
+  color: inherit;
+}
+
+.social-link span {
+  font-size: 20px;
+}
+
+.intro-desc {
+  color: white;
+  font-size: 20px;
+  text-align: start;
+  display: flex;
+  flex-wrap: wrap;
 }

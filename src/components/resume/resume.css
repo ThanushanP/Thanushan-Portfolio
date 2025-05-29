@@ -1,78 +1,134 @@
-.resume{
-    background-color: #21213d;
-    width: 100vw;
-    height: calc(100vh - 70px);
-    scroll-snap-align: start;
-    text-align: center;
+.resume {
+  background-color: #21213d;
+  width: 100vw;
+  height: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 30px;
 }
 
-h1{
-    padding-top: 5px;
-    font-size: 50px;
-}
-@media screen and (max-width: 768px){
-    .container{
-        width: 99vh;
-        height: 80vh;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .list{
-        font-size: 15px;
-        text-align: center;
-        width:48vh;
-        height: 80vh;
-        background-color: #282828;
-        border-radius: 10%;
-        margin-bottom: 20px;
-    }
-
-}
-@media screen and (min-width: 768px){
-    .container{
-        width: 99vh;
-        height: 80vh;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .list{
-        font-size: 15px;
-        text-align: center;
-        width:48vh;
-        height: 80vh;
-        background-color: #282828;
-        border-radius: 10%;
-    }
-
+.resume_info::-webkit-scrollbar {
+  display: none;
 }
 
-h2{
-    font-weight:bold;
-    font-style: oblique;
-    padding: 5px;
-    color:lightgray;
-    text-decoration: overline;
-}
-.body{
-    text-align: left;
-}
-.small{
-    font-size: 25px;
-}
-.title{
-    padding-left: 10px;
-    font-weight: bold;
-    font-size: 30px;
-}
-.sub{
-    font-style: italic;
-    font-size: 20px;
+.resume_buttons {
+  height: inherit;
+  width: 25dvw;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
 }
 
+.resume_info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+}
+
+.resume_info::before {
+  content: ""; /* Default content */
+  font-family: "Font Awesome 5 Free"; /* Font Awesome font family */
+  font-weight: 900; /* Font Awesome solid icons */
+  font-size: 150px; /* Adjust size as needed */
+  color: rgba(0, 0, 0, 0.1); /* Light gray color for the background icon */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0; /* Ensure it is behind the content */
+  pointer-events: none; /* Prevent interaction with the icon */
+}
+
+.resume_info.education-bg::before {
+  content: "\f19d"; /* Unicode for graduation cap icon */
+}
+
+.resume_info.experience-bg::before {
+  content: "\f0b1"; /* Unicode for briefcase icon */
+}
+
+.resume_info.skills-bg::before {
+  content: "\f040"; /* Unicode for pencil icon */
+}
+
+.resume_info_box {
+  position: relative;
+  z-index: 1; /* Ensure the content is above the background icon */
+  background-color: rgba(234, 233, 233, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  padding: 10px;
+}
+
+.res_but {
+  width: 100%;
+  height: calc(100% / 3);
+  background-color: rgba(192, 187, 187, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.res_but:hover,
+.res_but.active {
+  background-color: rgba(33, 33, 61, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.label {
+  font-weight: bold;
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(187, 181, 181);
+}
+
+.fas {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .resume {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+  .resume_buttons {
+    width: 100%;
+    height: 25dvh;
+    flex-direction: row;
+  }
+  .res_but {
+    height: 100%;
+    width: calc(100% / 3);
+  }
+  .resume_info {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .resume_info_box {
+    height: auto;
+    overflow: visible;
+  }
+}
