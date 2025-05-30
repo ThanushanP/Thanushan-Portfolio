@@ -1,52 +1,54 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
 import "./projects.css";
 import { first, second, third, fourth, fifth } from "../../App";
 
 export default function Projects() {
-  const [activeSection, setActiveSection] = useState("first");
-  const data =
-    activeSection === "first"
-      ? first
-      : activeSection === "second"
-      ? second
-      : activeSection === "third"
-      ? third
-      : activeSection === "fourth"
-      ? fourth
-      : fifth;
+  const allSections = [first, second, third, fourth, fifth];
+  const allProjects = allSections.flat();
+  const [index, setIndex] = useState(0);
 
-  const sections = ["first", "second", "third", "fourth", "fifth"];
+  const handleSelect = (selectedIndex) => setIndex(selectedIndex);
 
-  const handleNext = () => {
-    const currentIndex = sections.indexOf(activeSection);
-    const nextIndex = (currentIndex + 1) % sections.length;
-    setActiveSection(sections[nextIndex]);
-  };
+  if (allProjects.length === 0) {
+    return <div className="loading">Loading...</div>;
+  }
 
-  const handlePrev = () => {
-    const currentIndex = sections.indexOf(activeSection);
-    const prevIndex = (currentIndex - 1 + sections.length) % sections.length;
-    setActiveSection(sections[prevIndex]);
-  };
   return (
     <div className="projects" id="projects">
-      {/* Check if data is empty */}
-      {data.length === 0 ? (
-        <div className="loading">Loading...</div> // Show loading animation
-      ) : (
-        <>
-          {/* Left Arrow */}
-          <div className="arrow left" onClick={handlePrev}>
-            <i className="fas fa-chevron-left"></i>
-          </div>
-
-          {/* Image Container */}
-          <div className="image-wrapper">
-            {data.map((d, index) => (
+      <div className="carousel-wrapper">
+        <div
+          className="arrow left"
+          onClick={() =>
+            setIndex((index - 1 + allProjects.length) % allProjects.length)
+          }
+        >
+          &#x276E;
+        </div>
+        <Carousel
+          activeIndex={index}
+          className="carousel"
+          onSelect={handleSelect}
+          interval={null}
+          wrap={true}
+          indicators={true}
+          controls={false}
+        >
+          {allProjects.map((d, idx) => (
+            <Carousel.Item key={idx}>
               <div
-                key={index}
                 className="image-container"
-                style={{ backgroundImage: `url(${d.title})` }}
+                style={{
+                  backgroundImage: `url(${d.title})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  height: "60vh",
+                  borderRadius: "20px",
+                  margin: "0 auto",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
               >
                 <div className="overlay">
                   <h2>{d.name}</h2>
@@ -67,15 +69,16 @@ export default function Projects() {
                   </ul>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* Right Arrow */}
-          <div className="arrow right" onClick={handleNext}>
-            <i className="fas fa-chevron-right"></i>
-          </div>
-        </>
-      )}
+            </Carousel.Item>
+          ))}
+        </Carousel>
+        <div
+          className="arrow right"
+          onClick={() => setIndex((index + 1) % allProjects.length)}
+        >
+          &#x276F;
+        </div>
+      </div>
     </div>
   );
 }
