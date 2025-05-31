@@ -9,6 +9,7 @@ import TopBar from "./components/topBar/TopBar";
 import Intro from "./components/intro/Intro";
 import Resume from "./components/resume/Resume";
 import Projects from "./components/projects/Projects";
+import Contact from "./components/contact/contact";
 export let school = [];
 export let Freelance = [];
 export let RBI = [];
@@ -198,6 +199,7 @@ function App() {
         <Intro />
         <Resume />
         <Projects />
+        <Contact />
       </div>
     </div>
   );

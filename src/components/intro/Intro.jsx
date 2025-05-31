@@ -3,7 +3,7 @@ import "./intro.css";
 
 export default function Intro() {
   return (
-    <div className="intro" id="intro">
+    <div className="intro" id="Home">
       <div className="intro-left">
         <img
           src="https://media.licdn.com/dms/image/v2/D5603AQFFfmv7j5cosA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732507376780?e=1753315200&v=beta&t=wFbY_xVu66qcDKr-iZiXZ-5jWGnM5SNo94iqGNBDHyM"

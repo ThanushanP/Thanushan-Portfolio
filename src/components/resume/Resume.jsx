@@ -127,7 +127,7 @@ export default function Resume() {
   };
 
   return (
-    <div className="resume" id="resume">
+    <div className="resume" id="Resume">
       <div className="resume_buttons">
         <button
           className={`res_but ${activeSection === "education" ? "active" : ""}`}

@@ -1,0 +1,158 @@
+.contact {
+  background: linear-gradient(180deg, #c0bbbb, #21213d);
+  width: 100vw;
+  height: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact::-webkit-scrollbar {
+  display: none;
+}
+.contact-title {
+  width: 40dvw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-left: 20px;
+  text-align: center;
+}
+.contact-container {
+  width: 60dvw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.contact-form {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(234, 233, 233, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+  color: black;
+}
+
+.submit-btn {
+  align-self: flex-end;
+  padding: 10px 24px;
+  background: #21213d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #0077b5;
+}
+
+.socials {
+  font-size: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.social-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover {
+  color: #0077b5;
+}
+
+.social-link i {
+  overflow: hidden;
+}
+
+.social-link:hover i,
+.social-link:hover span {
+  color: inherit;
+}
+.contact-divider {
+  border: none;
+  border-top: 2px solid #aaa;
+  margin: 20px 0;
+  width: 80%;
+  align-self: center;
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    overflow: visible;
+  }
+
+  .contact-title {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .contact-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}

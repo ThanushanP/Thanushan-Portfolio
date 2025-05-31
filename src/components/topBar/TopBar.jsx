@@ -23,14 +23,17 @@ export default function TopBar() {
 
           {/* Navigation Links */}
           <div className={`menu ${menuOpen ? "active" : ""}`}>
-            <a href="#intro" onClick={() => setMenuOpen(false)}>
+            <a href="#Home" onClick={() => setMenuOpen(false)}>
               Home
             </a>
-            <a href="#resume" onClick={() => setMenuOpen(false)}>
+            <a href="#Resume" onClick={() => setMenuOpen(false)}>
               Resume
             </a>
-            <a href="#projects" onClick={() => setMenuOpen(false)}>
+            <a href="#Projects" onClick={() => setMenuOpen(false)}>
               Projects
+            </a>
+            <a href="#Contact" onClick={() => setMenuOpen(false)}>
+              Contact
             </a>
           </div>
         </div>

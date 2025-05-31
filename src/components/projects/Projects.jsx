@@ -15,7 +15,7 @@ export default function Projects() {
   }
 
   return (
-    <div className="projects" id="projects">
+    <div className="projects" id="Projects">
       <div className="carousel-wrapper">
         <div
           className="arrow left"
@@ -40,14 +40,6 @@ export default function Projects() {
                 className="image-container"
                 style={{
                   backgroundImage: `url(${d.title})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  height: "60vh",
-                  borderRadius: "20px",
-                  margin: "0 auto",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                 }}
               >
                 <div className="overlay">
