@@ -47,7 +47,6 @@ export default function Chat() {
   };
 
   function renderMessageText(text) {
-    // Simpler regex: match URLs, allow trailing punctuation
     const urlRegex = /(https?:\/\/[^\s]+)/g;
     return text.split(urlRegex).map((part, i) =>
       urlRegex.test(part) ? (
