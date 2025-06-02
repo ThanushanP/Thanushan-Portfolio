@@ -10,6 +10,7 @@ import Intro from "./components/intro/Intro";
 import Resume from "./components/resume/Resume";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/contact";
+import Chat from "./components/chatbot/chat";
 export let school = [];
 export let Freelance = [];
 export let RBI = [];
@@ -195,6 +196,7 @@ function App() {
   return (
     <div className="app">
       <TopBar />
+      <Chat />
       <div className="sections">
         <Intro />
         <Resume />
