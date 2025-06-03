@@ -196,7 +196,7 @@ function App() {
   return (
     <div className="app">
       <TopBar />
-      <Chat />
+      {/* <Chat /> */}
       <div className="sections">
         <Intro />
         <Resume />
