@@ -1,6 +1,6 @@
 import "./resume.css";
 import React, { useState } from "react";
-import { school, RBI, skills, Mitsubishi, Freelance } from "../../App";
+import { school, RBI, skills, Mitsubishi, Freelance, FemmeCo } from "../../App";
 
 export default function Resume() {
   const [activeSection, setActiveSection] = useState("education");
@@ -40,6 +40,7 @@ export default function Resume() {
         );
       case "experience":
         if (
+          FemmeCo.length === 0 &&
           Freelance.length === 0 &&
           RBI.length === 0 &&
           Mitsubishi.length === 0
@@ -48,6 +49,21 @@ export default function Resume() {
         }
         return (
           <div className="resume_info_content">
+            {FemmeCo.map((item, index) => (
+              <div className="body" key={index}>
+                <h3 className="title">{item.title}</h3>
+                <h3 className="sub">{item.sub}</h3>
+                <h3 className="small">{item.date}</h3>
+                <h3 className="small">{item.location}</h3>
+                <ul>
+                  <li>{item.one}</li>
+                  <li>{item.two}</li>
+                  <li>{item.three}</li>
+                  <li>{item.four}</li>
+                  <li>{item.five}</li>
+                </ul>
+              </div>
+            ))}
             {Freelance.map((item, index) => (
               <div className="body" key={index}>
                 <h3 className="title">{item.title}</h3>

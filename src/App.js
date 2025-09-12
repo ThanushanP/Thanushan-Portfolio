@@ -13,6 +13,7 @@ import Contact from "./components/contact/contact";
 // import Chat from "./components/chatbot/chat";
 export let school = [];
 export let Freelance = [];
+export let FemmeCo = [];
 export let RBI = [];
 export let skills = [];
 export let Mitsubishi = [];
@@ -189,6 +190,21 @@ function App() {
         six: resume[9].six,
         seven: resume[9].seven,
         eight: resume[9].eight,
+      },
+    ];
+  }
+  if (resume[10] !== undefined) {
+    FemmeCo = [
+      {
+        title: resume[10].title,
+        date: resume[10].date,
+        location: resume[10].location,
+        sub: resume[10].sub,
+        one: resume[10].one,
+        two: resume[10].two,
+        three: resume[10].three,
+        four: resume[10].four,
+        five: resume[10].five,
       },
     ];
   }
