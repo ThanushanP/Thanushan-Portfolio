@@ -47,167 +47,25 @@ function App() {
       });
   }, []);
 
-  school = [
-    {
-      title: resume[0].title,
-      date: resume[0].date,
-      location: resume[0].location,
-      sub: resume[0].sub,
-      one: resume[0].one,
-      gpa: resume[0].gpa,
-      courses: resume[0].courses,
-    },
-  ];
-  if (resume[1] !== undefined) {
-    RBI = [
-      {
-        title: resume[1].title,
-        date: resume[1].date,
-        location: resume[1].location,
-        sub: resume[1].sub,
-        one: resume[1].one,
-        two: resume[1].two,
-        three: resume[1].three,
-      },
-    ];
-  }
+  school = [resume.find((item) => item.title === "Brock University") || {}];
+  RBI = [resume.find((item) => item.sub === "Mestek RBI") || {}];
+  skills = [resume.find((item) => item.sub === "skills") || {}];
+  Mitsubishi = [resume.find((item) => item.sub === "Mitsubishi") || {}];
+  Freelance = [resume.find((item) => item.sub === "Freelance") || {}];
+  FemmeCo = [resume.find((item) => item.sub === "Femme & Co") || {}];
 
-  if (resume[2] !== undefined) {
-    skills = [
-      {
-        title: resume[2].title,
-        date: resume[2].date,
-        location: resume[2].location,
-        sub: resume[2].sub,
-        Languages: resume[2].Languages,
-        Frameworks: resume[2].Frameworks,
-        Tools: resume[2].Tools,
-        Soft: resume[2].Soft,
-      },
-    ];
-  }
+  // Get all projects by type
+  const projectItems = resume.filter((item) => item.type === "project");
 
-  if (resume[3] !== undefined) {
-    Mitsubishi = [
-      {
-        title: resume[3].title,
-        date: resume[3].date,
-        location: resume[3].location,
-        sub: resume[3].sub,
-        one: resume[3].one,
-        two: resume[3].two,
-        three: resume[3].three,
-      },
-    ];
-  }
-  if (resume[4] !== undefined) {
-    first = [
-      {
-        title: resume[4].title,
-        name: resume[4].name,
-        date: resume[4].date,
-        location: resume[4].location,
-        tech: resume[4].tech,
-        sub: resume[4].sub,
-        one: resume[4].one,
-        two: resume[4].two,
-        three: resume[4].three,
-      },
-    ];
-  }
-  if (resume[5] !== undefined) {
-    second = [
-      {
-        title: resume[5].title,
-        name: resume[5].name,
-        tech: resume[5].tech,
-        date: resume[5].date,
-        location: resume[5].location,
-        sub: resume[5].sub,
-        one: resume[5].one,
-        two: resume[5].two,
-        three: resume[5].three,
-      },
-    ];
-  }
-  if (resume[6] !== undefined) {
-    third = [
-      {
-        title: resume[6].title,
-        date: resume[6].date,
-        name: resume[6].name,
-        tech: resume[6].tech,
-        location: resume[6].location,
-        sub: resume[6].sub,
-        one: resume[6].one,
-        two: resume[6].two,
-        three: resume[6].three,
-      },
-    ];
-  }
-  if (resume[7] !== undefined) {
-    fourth = [
-      {
-        title: resume[7].title,
-        date: resume[7].date,
-        name: resume[7].name,
-        tech: resume[7].tech,
-        location: resume[7].location,
-        sub: resume[7].sub,
-        one: resume[7].one,
-        two: resume[7].two,
-      },
-    ];
-  }
-  if (resume[8] !== undefined) {
-    fifth = [
-      {
-        title: resume[8].title,
-        date: resume[8].date,
-        name: resume[8].name,
-        tech: resume[8].tech,
-        location: resume[8].location,
-        sub: resume[8].sub,
-        one: resume[8].one,
-        two: resume[8].two,
-        three: resume[8].three,
-      },
-    ];
-  }
+  // Randomly assign projects to first, second, third, fourth, fifth
+  [first, second, third, fourth, fifth] = projectItems;
 
-  if (resume[9] !== undefined) {
-    Freelance = [
-      {
-        title: resume[9].title,
-        date: resume[9].date,
-        location: resume[9].location,
-        sub: resume[9].sub,
-        one: resume[8].one,
-        two: resume[9].two,
-        three: resume[9].three,
-        four: resume[9].four,
-        five: resume[9].five,
-        six: resume[9].six,
-        seven: resume[9].seven,
-        eight: resume[9].eight,
-      },
-    ];
-  }
-  if (resume[10] !== undefined) {
-    FemmeCo = [
-      {
-        title: resume[10].title,
-        date: resume[10].date,
-        location: resume[10].location,
-        sub: resume[10].sub,
-        one: resume[10].one,
-        two: resume[10].two,
-        three: resume[10].three,
-        four: resume[10].four,
-        five: resume[10].five,
-      },
-    ];
-  }
+  // If there are fewer than 5 projects, fill with empty objects
+  first = [first || {}];
+  second = [second || {}];
+  third = [third || {}];
+  fourth = [fourth || {}];
+  fifth = [fifth || {}];
 
   return (
     <div className="app">
