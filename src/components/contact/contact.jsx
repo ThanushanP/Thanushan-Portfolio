@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./contact.css";
 
-const apiUrl = process.env.REACT_APP_API_URL;
-
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
@@ -14,16 +12,26 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
+
+    const body = new URLSearchParams({
+      "form-name": "contact",
+      ...form,
+    });
+
     try {
-      const res = await fetch(`${apiUrl}/contact`, {
+      const res = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
       });
-      if (res.ok) setStatus("Message sent!");
-      else setStatus("Failed to send.");
+      if (res.ok) {
+        setStatus("Message sent!");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("Failed to send. Please try again.");
+      }
     } catch {
-      setStatus("Failed to send.");
+      setStatus("Failed to send. Please try again.");
     }
   };
 
@@ -63,7 +71,19 @@ export default function Contact() {
       </div>
       <div className="contact-container">
         <div className="contact-form">
-          <form onSubmit={handleSubmit}>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>
+                Don’t fill this out: <input name="bot-field" />
+              </label>
+            </p>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input

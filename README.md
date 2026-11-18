@@ -13,4 +13,4 @@ Create a production build with `npm run build`.
 
 ## Contact form
 
-The contact form still sends submissions to the backend. Set `REACT_APP_API_URL` to the backend base URL in the deployment environment; the form posts to its `/contact` endpoint.
+The contact form uses Netlify Forms. After deploying to Netlify, submissions appear in the site's **Forms** tab. The static form in `public/index.html` allows Netlify to detect the form during the build; submissions from a local development server are not received by Netlify.
