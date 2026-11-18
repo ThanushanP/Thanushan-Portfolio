@@ -1,134 +1,178 @@
 .resume {
-  background-color: #21213d;
-  width: 100vw;
-  height: 100%;
-  scroll-snap-align: start;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  padding: 30px;
+  border-top: 1px solid rgba(215, 232, 224, 0.08);
 }
 
-.resume_info::-webkit-scrollbar {
-  display: none;
+.resume-layout {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
 }
 
-.resume_buttons {
-  height: inherit;
-  width: 25dvw;
-  padding: 25px;
+.resume-tabs {
+  position: sticky;
+  top: 96px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
+  gap: 8px;
 }
 
-.resume_info {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 25px;
-}
-
-.resume_info::before {
-  content: ""; /* Default content */
-  font-family: "Font Awesome 5 Free"; /* Font Awesome font family */
-  font-weight: 900; /* Font Awesome solid icons */
-  font-size: 150px; /* Adjust size as needed */
-  color: rgba(0, 0, 0, 0.1); /* Light gray color for the background icon */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0; /* Ensure it is behind the content */
-  pointer-events: none; /* Prevent interaction with the icon */
-}
-
-.resume_info.education-bg::before {
-  content: "\f19d"; /* Unicode for graduation cap icon */
-}
-
-.resume_info.experience-bg::before {
-  content: "\f0b1"; /* Unicode for briefcase icon */
-}
-
-.resume_info.skills-bg::before {
-  content: "\f040"; /* Unicode for pencil icon */
-}
-
-.resume_info_box {
-  position: relative;
-  z-index: 1; /* Ensure the content is above the background icon */
-  background-color: rgba(234, 233, 233, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+.resume-tab {
+  padding: 11px 14px;
+  border: 1px solid transparent;
   border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease;
-  padding: 10px;
+  background: transparent;
+  color: #a4b0b5;
+  font-size: 0.9rem;
+  text-align: left;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
 }
 
-.res_but {
-  width: 100%;
-  height: calc(100% / 3);
-  background-color: rgba(192, 187, 187, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10%;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
+.resume-tab:hover,
+.resume-tab.active {
+  border-color: rgba(196, 161, 255, 0.16);
+  background: rgba(196, 161, 255, 0.08);
+  color: #c4a1ff;
+}
+
+.resume-content {
+  min-width: 0;
+}
+
+.experience-list,
+.skills-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.resume-card {
+  scroll-margin-top: 92px;
+  padding: 24px;
+  border: 1px solid rgba(215, 232, 224, 0.1);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #141c23, #10171e);
+}
+
+.resume-card h3 {
+  margin: 0;
+  color: #f2f5f4;
+  font-size: 1.12rem;
+}
+
+.resume-card-heading {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
-}
-.res_but:hover,
-.res_but.active {
-  background-color: rgba(33, 33, 61, 0.3);
-  transform: translateY(-10px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
 }
 
-.label {
-  font-weight: bold;
-  font-size: 25px;
-  font-style: italic;
-  color: rgb(187, 181, 181);
+.resume-card-heading p {
+  margin: 3px 0 0;
+  color: #c4a1ff;
 }
 
-.fas {
-  overflow: hidden;
+.resume-date {
+  flex-shrink: 0;
+  color: #a4b0b5;
+  font-size: 0.8rem;
+  text-align: right;
 }
 
-@media screen and (max-width: 768px) {
-  .resume {
-    flex-direction: column;
-    height: auto;
-    overflow: visible;
+.resume-meta {
+  margin: 8px 0 12px;
+  color: #a4b0b5;
+  font-size: 0.87rem;
+}
+
+.resume-card ul {
+  margin: 14px 0;
+  padding-left: 19px;
+  color: #c1ccca;
+  font-size: 0.9rem;
+}
+
+.resume-card li + li {
+  margin-top: 8px;
+}
+
+.resume-card li::marker {
+  color: #c4a1ff;
+}
+
+.resume-card a {
+  color: #c4a1ff;
+  text-decoration: none;
+}
+
+.resume-card a:hover {
+  text-decoration: underline;
+}
+
+.resume-card h4 {
+  margin: 22px 0 10px;
+  color: #dce5e1;
+  font-size: 0.9rem;
+}
+
+.resume-highlight {
+  color: #b7c5bf;
+  font-size: 0.86rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.skill-chip {
+  padding: 5px 10px;
+  border: 1px solid rgba(196, 161, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(196, 161, 255, 0.06);
+  color: #ddd0f4;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 700px) {
+  .resume-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
-  .resume_buttons {
-    width: 100%;
-    height: 25dvh;
+
+  .resume-tabs {
+    position: static;
     flex-direction: row;
   }
-  .res_but {
-    height: 100%;
-    width: calc(100% / 3);
+
+  .resume-tab {
+    flex: 1;
+    text-align: center;
   }
-  .resume_info {
-    width: 100%;
-    height: auto;
-    overflow: visible;
+}
+
+@media (max-width: 560px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
-  .resume_info_box {
-    height: auto;
-    overflow: visible;
+  .resume-card {
+    padding: 19px;
+  }
+
+  .resume-card-heading {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .resume-date {
+    text-align: left;
   }
 }

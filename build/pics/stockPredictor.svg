@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" fill="none">
+  <defs>
+    <linearGradient id="background" x1="84" y1="26" x2="888" y2="466" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C9C1F0"/>
+      <stop offset="1" stop-color="#A59BE2"/>
+    </linearGradient>
+    <linearGradient id="chart" x1="608" y1="333" x2="841" y2="145" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7168C7"/>
+      <stop offset="1" stop-color="#DCD8FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="480" rx="28" fill="url(#background)"/>
+  <circle cx="733" cy="238" r="187" fill="#F1EEFF" fill-opacity=".24"/>
+  <rect x="554" y="78" width="338" height="310" rx="20" fill="#191A31" stroke="#8077D0" stroke-opacity=".68" stroke-width="2"/>
+  <text x="582" y="118" fill="#B5B1D0" font-family="Segoe UI, Arial, sans-serif" font-size="13" letter-spacing="2">MARKET OUTLOOK</text>
+  <text x="580" y="160" fill="#F2F5F4" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="700">AAPL</text>
+  <text x="657" y="160" fill="#DCD8FF" font-family="Segoe UI, Arial, sans-serif" font-size="20">$192.42</text>
+  <rect x="781" y="137" width="82" height="30" rx="15" fill="#7168C7" fill-opacity=".35"/>
+  <text x="801" y="157" fill="#E3E0FF" font-family="Segoe UI, Arial, sans-serif" font-size="13">+15%</text>
+  <path d="M582 337h280M582 291h280M582 245h280M582 199h280" stroke="#FFFFFF" stroke-opacity=".08" stroke-width="1"/>
+  <path d="M602 311v-27m0 12h16v13h16v-29h16v10h16v-32h16v15h16v-8h16v-25h16v13h16v-19h16v-16h16v11h16v-27h16" stroke="url(#chart)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M602 322c47 5 70-12 104-31 34-18 53-22 81-38 28-17 42-38 75-42" stroke="#AEA7F0" stroke-opacity=".58" stroke-width="2" stroke-dasharray="7 9"/>
+  <circle cx="862" cy="211" r="8" fill="#E8E5FF"/>
+  <path d="m846 211 12-12 12 12" stroke="#E8E5FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="64" y="174" fill="#5D54AE" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">DATA · MODELS · DECISIONS</text>
+  <text x="60" y="245" fill="#252342" font-family="Segoe UI, Arial, sans-serif" font-size="46" font-weight="700">Stock Predictor</text>
+  <text x="64" y="294" fill="#484663" font-family="Segoe UI, Arial, sans-serif" font-size="19">Market data, forecasting, and machine learning.</text>
+  <rect x="64" y="334" width="116" height="36" rx="18" fill="#7168C7" fill-opacity=".25" stroke="#5D54AE" stroke-opacity=".55"/>
+  <text x="122" y="357" fill="#312C64" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="middle">iOS · AWS</text>
+</svg>

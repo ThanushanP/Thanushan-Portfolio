@@ -3,28 +3,30 @@ import "./intro.css";
 
 export default function Intro() {
   return (
-    <div className="intro" id="Home">
+    <section className="intro" id="Home">
       <div className="intro-left">
         <img
           src="/pics/profile.jpg"
           alt="Thanushan Pirapakaran"
           className="intro-image"
+          width="240"
+          height="240"
         />
-        <div className="intro-title">
-          <span style={{ fontSize: "40px" }}>Thanushan Pirapakaran</span>
-          <span>Full Stack Developer</span>
-        </div>
       </div>
       <div className="intro-right">
-        <span style={{ fontSize: "30px" }}>Software Engineering Portfolio</span>
+        <p className="eyebrow">Software engineering · industrial automation</p>
+        <h1 className="intro-title">
+          Hi, I’m <span>Thanushan Pirapakaran.</span>
+        </h1>
+        <h2 className="intro-role">Software &amp; Automation Engineer</h2>
         <span className="intro-desc">
-          I’m Thanushan Pirapakaran, a Computer Science grad from Brock
-          University with a strong foundation in full-stack development. I’ve
-          led group projects using React, JavaScript, Java, and SQL, and have
-          experience working in Agile Scrum environments. While I bring solid
-          technical skills and real-world team experience, I’m always looking to
-          learn and grow. I’m a quick, adaptable learner and excited to keep
-          building both my technical and interpersonal skills in this role.
+          I’m a Computer Science graduate and software engineer with experience
+          building full-stack and cross-platform applications, alongside
+          hands-on industrial automation integration. My work spans React,
+          Java, Python, cloud infrastructure, and connecting autonomous mobile
+          robots, PLCs, SCADA, and industrial protocols. I enjoy solving
+          problems end-to-end—from designing software systems and APIs to
+          deploying reliable, efficient automation on the production floor.
         </span>
         <div className="socials-menu">
           <span>
@@ -47,10 +49,10 @@ export default function Intro() {
             className="social-link"
           >
             <i className="fab fa-github"></i>
-            <span>Github/ThanushanP</span>
+            <span>GitHub/ThanushanP</span>
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

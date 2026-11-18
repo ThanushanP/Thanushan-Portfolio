@@ -28,10 +28,10 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact" id="Contact">
+    <section className="contact section-shell" id="Contact">
       <div className="contact-title">
         <hr className="contact-divider" />
-        <h1>Lets Connnect!</h1>
+        <h2>Let’s connect</h2>
         <h3>Feel free to reach out to me here or through the socials below</h3>
         <hr className="contact-divider" />
         <div className="socials">
@@ -100,10 +100,14 @@ export default function Contact() {
             <button type="submit" className="submit-btn">
               Submit
             </button>
-            {status && <div>{status}</div>}
+            {status && (
+              <div aria-live="polite" className="contact-status">
+                {status}
+              </div>
+            )}
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

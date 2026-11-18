@@ -1,84 +1,77 @@
-import React, { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
-import Spinner from "react-bootstrap/Spinner";
+import React from "react";
+import { projects } from "../../data/portfolioData";
 import "./projects.css";
-import { first, second, third, fourth, fifth } from "../../App";
 
 export default function Projects() {
-  const allSections = [first, second, third, fourth, fifth];
-  const allProjects = allSections.flat();
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex) => setIndex(selectedIndex);
-
   return (
-    <div className="projects" id="Projects">
-      <div className="carousel-wrapper">
-        {allProjects.length === 0 ? (
-          <div className="loading">
-            <Spinner animation="border" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </Spinner>
-            <div>Loading projects...</div>
-          </div>
-        ) : (
-          <>
-            <div
-              className="arrow left"
-              onClick={() =>
-                setIndex((index - 1 + allProjects.length) % allProjects.length)
-              }
-            >
-              &#x276E;
-            </div>
-            <Carousel
-              activeIndex={index}
-              className="carousel"
-              onSelect={handleSelect}
-              interval={null}
-              wrap={true}
-              indicators={true}
-              controls={false}
-            >
-              {allProjects.map((d, idx) => (
-                <Carousel.Item key={idx}>
-                  <div
-                    className="image-container"
-                    style={{
-                      backgroundImage: `url(${d.title})`,
-                    }}
-                  >
-                    <div className="overlay">
-                      <h2>{d.name}</h2>
-                      <h4>{d.date}</h4>
-                      <ul>
-                        <li>{d.one}</li>
-                        <li>{d.two}</li>
-                        <li>{d.three}</li>
-                        <li>
-                          <a
-                            href={d.location}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            GitHub Link
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </Carousel.Item>
-              ))}
-            </Carousel>
-            <div
-              className="arrow right"
-              onClick={() => setIndex((index + 1) % allProjects.length)}
-            >
-              &#x276F;
-            </div>
-          </>
-        )}
+    <section className="projects section-shell" id="Projects">
+      <div className="section-heading">
+        <p className="eyebrow">Selected work</p>
+        <h2>Things I’ve built</h2>
+        <p>A few projects I’ve enjoyed bringing to life.</p>
       </div>
-    </div>
+      <div className="project-grid">
+        {projects.map((project, index) => {
+          const preview = (
+            <>
+              <img
+                alt={`${project.name} preview`}
+                className="project-image"
+                height="240"
+                loading={index < 2 ? "eager" : "lazy"}
+                src={project.image}
+                width="480"
+              />
+              {project.url && (
+                <span className="project-image-action">View project ↗</span>
+              )}
+            </>
+          );
+
+          return (
+            <article
+              className="project-card"
+              id={project.anchorId}
+              key={project.name}
+            >
+              {project.url ? (
+                <a
+                  aria-label={`View ${project.name} source code`}
+                  className="project-image-link"
+                  href={project.url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {preview}
+                </a>
+              ) : (
+                <div className="project-image-link">{preview}</div>
+              )}
+              <div className="project-copy">
+                <p className="project-date">{project.date}</p>
+                <h3>{project.name}</h3>
+                <ul>
+                  {project.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+                <p className="project-tech">{project.tech}</p>
+                {project.liveUrl && (
+                  <div className="project-links">
+                    <a
+                      href={project.liveUrl}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Live site <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                )}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
   );
 }

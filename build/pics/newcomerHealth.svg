@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" fill="none">
+  <defs>
+    <linearGradient id="background" x1="84" y1="26" x2="888" y2="466" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1728"/>
+      <stop offset="1" stop-color="#10151D"/>
+    </linearGradient>
+    <linearGradient id="pin" x1="624" y1="111" x2="781" y2="325" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DDC9FF"/>
+      <stop offset="1" stop-color="#9B70E8"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="480" rx="28" fill="url(#background)"/>
+  <circle cx="727" cy="228" r="152" fill="#9B70E8" fill-opacity=".08"/>
+  <path d="M518 365c48-35 86-47 136-39 49 8 84 1 124-25 43-28 92-37 144-24" stroke="#C4A1FF" stroke-opacity=".22" stroke-width="3" stroke-dasharray="8 12"/>
+  <path d="M542 139c44 26 70 31 113 18 42-13 70-12 108 7 28 14 53 18 89 9" stroke="#C4A1FF" stroke-opacity=".16" stroke-width="3" stroke-dasharray="8 12"/>
+  <circle cx="568" cy="365" r="10" fill="#C4A1FF"/>
+  <circle cx="922" cy="277" r="10" fill="#C4A1FF"/>
+  <circle cx="542" cy="139" r="8" fill="#DDC9FF"/>
+  <circle cx="852" cy="173" r="8" fill="#DDC9FF"/>
+  <path d="M706 133c-42 0-76 34-76 76 0 54 76 135 76 135s76-81 76-135c0-42-34-76-76-76Z" fill="url(#pin)"/>
+  <circle cx="706" cy="209" r="29" fill="#201B2D"/>
+  <path d="M706 192v34M689 209h34" stroke="#E8DEFF" stroke-width="9" stroke-linecap="round"/>
+  <rect x="673" y="286" width="66" height="42" rx="12" fill="#161C25" stroke="#C4A1FF" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M690 307h32M706 291v32" stroke="#C4A1FF" stroke-width="4" stroke-linecap="round"/>
+  <text x="64" y="174" fill="#C4A1FF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">COMMUNITY · CARE · CONNECTION</text>
+  <text x="60" y="245" fill="#F2F5F4" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">Newcomer</text>
+  <text x="60" y="308" fill="#F2F5F4" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">Health App</text>
+  <text x="64" y="360" fill="#A4B0B5" font-family="Segoe UI, Arial, sans-serif" font-size="20">Discover local programs that support your health goals.</text>
+</svg>

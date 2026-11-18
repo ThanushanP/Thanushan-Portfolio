@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" fill="none">
+  <defs>
+    <linearGradient id="background" x1="84" y1="26" x2="888" y2="466" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101522"/>
+      <stop offset="1" stop-color="#180E1A"/>
+    </linearGradient>
+    <linearGradient id="summary" x1="682" y1="193" x2="830" y2="355" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20253A"/>
+      <stop offset="1" stop-color="#2B1729"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="480" rx="28" fill="url(#background)"/>
+  <circle cx="742" cy="237" r="186" fill="#FF4FAF" fill-opacity=".08"/>
+  <ellipse cx="751" cy="236" rx="189" ry="78" fill="#39DDF0" fill-opacity=".08" transform="rotate(-16 751 236)"/>
+  <rect x="560" y="89" width="326" height="292" rx="18" fill="#141922" stroke="#39DDF0" stroke-opacity=".5" stroke-width="2"/>
+  <path d="M560 124h326" stroke="#39DDF0" stroke-opacity=".28" stroke-width="2"/>
+  <circle cx="584" cy="107" r="5" fill="#FF4858"/>
+  <circle cx="602" cy="107" r="5" fill="#39DDF0" fill-opacity=".9"/>
+  <circle cx="620" cy="107" r="5" fill="#FF4FAF" fill-opacity=".8"/>
+  <rect x="586" y="149" width="116" height="8" rx="4" fill="#F2DDF2" fill-opacity=".82"/>
+  <rect x="586" y="170" width="235" height="6" rx="3" fill="#A4B0B5" fill-opacity=".32"/>
+  <rect x="586" y="187" width="209" height="6" rx="3" fill="#A4B0B5" fill-opacity=".25"/>
+  <rect x="586" y="204" width="225" height="6" rx="3" fill="#A4B0B5" fill-opacity=".25"/>
+  <rect x="586" y="221" width="126" height="6" rx="3" fill="#A4B0B5" fill-opacity=".25"/>
+  <rect x="586" y="249" width="278" height="105" rx="14" fill="url(#summary)" stroke="#39DDF0" stroke-opacity=".45" stroke-width="2"/>
+  <path d="m612 271 5 11 11 5-11 5-5 11-5-11-11-5 11-5 5-11Z" fill="#FF4858"/>
+  <text x="639" y="288" fill="#FFB8E5" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">AI SUMMARY</text>
+  <rect x="612" y="309" width="221" height="6" rx="3" fill="#39DDF0" fill-opacity=".76"/>
+  <rect x="612" y="326" width="188" height="6" rx="3" fill="#A4B0B5" fill-opacity=".4"/>
+  <path d="M731 56v24m-12-12h24" stroke="#FF4FAF" stroke-width="3" stroke-linecap="round"/>
+  <text x="64" y="174" fill="#59DEED" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">LESS SCROLLING · MORE INSIGHT</text>
+  <text x="60" y="245" fill="#F2F5F4" font-family="Segoe UI, Arial, sans-serif" font-size="46" font-weight="700">Web Summarizer</text>
+  <text x="64" y="294" fill="#A4B0B5" font-family="Segoe UI, Arial, sans-serif" font-size="19">AI summaries for web pages and video audio.</text>
+  <rect x="64" y="334" width="110" height="36" rx="18" fill="#39DDF0" fill-opacity=".12" stroke="#59DEED" stroke-opacity=".48"/>
+  <text x="119" y="357" fill="#D7F9FF" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="middle">AI · AUDIO</text>
+</svg>

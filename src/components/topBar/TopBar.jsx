@@ -3,41 +3,46 @@ import { useState } from "react";
 import "./topbar.css";
 
 export default function TopBar() {
-  const [menuOpen, setMenuOpen] = useState(false); // State to track if the menu is open
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="topBar">
+    <header className="topBar">
       <div className="wrapper">
-        <div className="left">
-          <a href="#intro" className="logo">
-            Thanushan Pirapakaran
+        <a href="#Home" className="logo">
+          Thanushan Pirapakaran
+        </a>
+        <button
+          aria-expanded={menuOpen}
+          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          type="button"
+        >
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+        </button>
+        <nav
+          aria-label="Main navigation"
+          className={`menu ${menuOpen ? "active" : ""}`}
+        >
+          <a href="#Home" onClick={() => setMenuOpen(false)}>
+            Home
           </a>
-        </div>
-        <div className="right">
-          {/* Hamburger Menu Icon */}
-          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-            <span className="line"></span>
-            <span className="line"></span>
-            <span className="line"></span>
-          </div>
-
-          {/* Navigation Links */}
-          <div className={`menu ${menuOpen ? "active" : ""}`}>
-            <a href="#Home" onClick={() => setMenuOpen(false)}>
-              Home
-            </a>
-            <a href="#Resume" onClick={() => setMenuOpen(false)}>
-              Resume
-            </a>
-            <a href="#Projects" onClick={() => setMenuOpen(false)}>
-              Projects
-            </a>
-            <a href="#Contact" onClick={() => setMenuOpen(false)}>
-              Contact
-            </a>
-          </div>
-        </div>
+          <a href="#Timeline" onClick={() => setMenuOpen(false)}>
+            Timeline
+          </a>
+          <a href="#Resume" onClick={() => setMenuOpen(false)}>
+            Resume
+          </a>
+          <a href="#Projects" onClick={() => setMenuOpen(false)}>
+            Projects
+          </a>
+          <a href="#Contact" onClick={() => setMenuOpen(false)}>
+            Contact
+          </a>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 }

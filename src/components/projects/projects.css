@@ -1,130 +1,126 @@
 .projects {
-  background-color: #c0bbbb;
-  width: 100vw;
-  height: 100%;
-  scroll-snap-align: start;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  position: relative;
+  border-top: 1px solid rgba(215, 232, 224, 0.08);
 }
 
-.projects::-webkit-scrollbar {
-  display: none;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
-.image-container {
-  min-height: 70dvh;
-  position: relative;
-  border-radius: 20px;
+.project-card {
+  scroll-margin-top: 92px;
   overflow: hidden;
-  border: 5px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
+  border: 1px solid rgba(215, 232, 224, 0.1);
+  border-radius: 16px;
+  background: #111820;
+  transition: transform 180ms ease, border-color 180ms ease;
 }
 
-.carousel {
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(196, 161, 255, 0.35);
+}
+
+.project-image-link {
   position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 2 / 1;
+  background: #1b252e;
+}
+
+.project-image {
+  display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  transition: transform 250ms ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.035);
+}
+
+.project-image-action {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(11, 15, 20, 0.76);
+  color: #fff;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.project-card:hover .project-image-action,
+.project-image-link:focus-visible .project-image-action {
+  opacity: 1;
+}
+
+.project-copy {
+  padding: 20px;
+}
+
+.project-date {
+  margin: 0 0 6px;
+  color: #c4a1ff;
+  font-size: 0.75rem;
+}
+
+.project-copy h3 {
+  margin: 0;
+  color: #f2f5f4;
+  font-size: 1.15rem;
+}
+
+.project-copy ul {
+  margin: 12px 0;
+  padding-left: 18px;
+  color: #a4b0b5;
+  font-size: 0.85rem;
+}
+
+.project-copy li + li {
+  margin-top: 6px;
+}
+
+.project-copy li::marker {
+  color: #c4a1ff;
+}
+
+.project-tech {
+  margin: 14px 0;
+  color: #d3ded9;
+  font-size: 0.78rem;
+}
+
+.project-links {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.image-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: inherit;
-  filter: blur(3px);
-  z-index: 1;
+.project-links a {
+  padding: 7px 12px;
+  border: 1px solid rgba(215, 232, 224, 0.14);
+  border-radius: 999px;
+  color: #d3ded9;
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: border-color 150ms ease, color 150ms ease;
 }
 
-.overlay {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  width: 90%;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-  text-align: center;
-  border-radius: 0 0 10px 10px;
-  background-color: rgba(28, 28, 28, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  translate: -50% 50%;
+.project-links a:hover {
+  border-color: #c4a1ff;
+  color: #c4a1ff;
 }
 
-/* Add this for the carousel wrapper */
-.carousel-wrapper {
-  width: 80vw;
-  max-width: 80dvw;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-}
-
-/* Make sure .arrow is inside .carousel-wrapper and positioned absolutely */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 20;
-  transition: background-color 0.3s ease;
-}
-
-.arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.arrow.left {
-  left: 0;
-}
-
-.arrow.right {
-  right: 0;
-}
-
-@media screen and (max-width: 768px) {
-  .projects {
-    padding: 10px;
-  }
-  .arrow {
-    top: 90%;
-  }
-  .carousel-wrapper {
-    height: 90%;
-  }
-  .carousel {
-    height: 100%;
-  }
-  .image-container {
-    height: 100%;
-  }
-  .overlay {
-    height: 95%;
+@media (max-width: 700px) {
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 }

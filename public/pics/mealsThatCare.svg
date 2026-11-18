@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" fill="none">
+  <defs>
+    <linearGradient id="background" x1="84" y1="26" x2="888" y2="466" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1728"/>
+      <stop offset="1" stop-color="#10151D"/>
+    </linearGradient>
+    <linearGradient id="heart" x1="684" y1="133" x2="804" y2="288" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2C08B"/>
+      <stop offset="1" stop-color="#B96F3C"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="480" rx="28" fill="url(#background)"/>
+  <circle cx="736" cy="232" r="174" fill="#C47A44" fill-opacity=".1"/>
+  <circle cx="736" cy="236" r="122" fill="#171B25" stroke="#C47A44" stroke-opacity=".54" stroke-width="2"/>
+  <circle cx="736" cy="236" r="96" fill="#211D30" stroke="#F2C08B" stroke-opacity=".68" stroke-width="3"/>
+  <path d="M736 276s-62-37-62-80c0-22 16-39 37-39 13 0 23 7 29 18 6-11 16-18 29-18 21 0 37 17 37 39 0 43-70 80-70 80Z" fill="url(#heart)"/>
+  <path d="M724 211h24m-12-12v24" stroke="#302644" stroke-width="7" stroke-linecap="round"/>
+  <path d="M594 180c-26-17-48-20-72-9m376 116c23 9 44 6 65-10M692 356c-19 18-40 23-68 17" stroke="#D99A60" stroke-opacity=".72" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 10"/>
+  <circle cx="522" cy="171" r="10" fill="#F2C08B"/>
+  <circle cx="963" cy="270" r="10" fill="#C47A44"/>
+  <circle cx="620" cy="372" r="9" fill="#C47A44"/>
+  <rect x="686" y="81" width="100" height="31" rx="15.5" fill="#C47A44" fill-opacity=".16" stroke="#D99A60" stroke-opacity=".55"/>
+  <text x="707" y="102" fill="#F4D6B6" font-family="Segoe UI, Arial, sans-serif" font-size="12" letter-spacing="1">COMMUNITY</text>
+  <text x="64" y="174" fill="#E2A46E" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">SHARE A MEAL · SHARE A MOMENT</text>
+  <text x="60" y="245" fill="#F2F5F4" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">Meals That Care</text>
+  <text x="64" y="294" fill="#A4B0B5" font-family="Segoe UI, Arial, sans-serif" font-size="21">Connecting people, charities, and community support.</text>
+  <rect x="64" y="334" width="102" height="36" rx="18" fill="#C47A44" fill-opacity=".16" stroke="#D99A60" stroke-opacity=".45"/>
+  <text x="115" y="357" fill="#F4D6B6" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="middle">WEB APP</text>
+</svg>
